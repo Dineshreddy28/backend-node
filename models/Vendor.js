@@ -8,7 +8,7 @@ const VendorSchema= new mongoose.Schema({
     email:{
         required: true,
         type: String,
-        Unique: true
+        unique: true
     },
     password:{
         required: true,
