@@ -8,7 +8,7 @@ const VendorRoute = require("./routes/VendorRoutes");
 const ProductRoute = require("./routes/ProductRoutes");
 const bodyparser = require("body-parser");
 const FirmRoute = require("./routes/FirmRoutes");
-const PORT = 4000;
+const PORT = process.env.PORT ||4000;
 
 dotEnv.config();
 mongoose
