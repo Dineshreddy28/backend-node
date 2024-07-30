@@ -8,11 +8,11 @@ const VendorRoute = require("./routes/VendorRoutes");
 const ProductRoute = require("./routes/ProductRoutes");
 const bodyparser = require("body-parser");
 const FirmRoute = require("./routes/FirmRoutes");
-const PORT = process.env.PORT ||4000;
-
+const PORT = process.env.PORT || 4000;
+console.log("Connection String: " + process.env.Mongo);
 dotEnv.config();
 mongoose
-  .connect(process.env.mongo)
+  .connect(process.env.Mongo)
   .then(() => console.log("connected"))
   .catch((error) => console.log(error));
 app.use(bodyparser.json());
