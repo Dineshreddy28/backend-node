@@ -1,6 +1,6 @@
 import React from 'react'
 import LandingPage from './VendorDashboard/Components/pages/LandingPage'
-import './App.css'
+import './'
 const App = () => {
   return (
     <center><div>
