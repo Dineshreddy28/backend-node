@@ -51,7 +51,7 @@ const vendorRecords=async(req, res)=>{
     }
     catch(error){
         res.status(500).json({Message:"Internal error"});
-        console.log(error);
+        console.log(error.stack);
     }
 }
 const vendorById=async(req, res)=>{

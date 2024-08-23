@@ -1,6 +1,7 @@
 const Product = require("../models/Product");
 const multer = require("multer");
 const Firm = require("../models/Firm");
+const path = require("path");
 const { default: mongoose } = require("mongoose");
 
 const storage = multer.diskStorage({
@@ -11,11 +12,11 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + path.extname(file.originalname));
   },
 });
-const upload = multer({ storage: storage });
+const uploads = multer({ storage: storage });
 const addproduct = async (req, res) => {
   try {
     const { productname, price, bestseller, category, description } = req.body;
-    const image = req.filename ? req.file.filename : undefined;
+    const image = req.file ? req.file.filename : undefined;
     const firmId = req.params.firmId;
     const firm = await Firm.findById(firmId);
     if (!firm) {
@@ -57,7 +58,25 @@ const getProductByFirm = async (req, res) => {
   }
 };
 
+const deleteproductById = async (req, res) => {
+  const productId = req.params.productId;
+
+  try {
+    console.log(productId);
+    const deletedProduct = await Product.findByIdAndDelete(productId);
+
+    if (!deletedProduct) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    res.status(200).json({ message: "Product deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "Error deleting product", error });
+  }
+};
+
 module.exports = {
-  addproduct: [upload.single("image"), addproduct],
+  addproduct: [uploads.single("file"), addproduct],
   getProductByFirm,
+  deleteproductById,
 };

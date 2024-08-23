@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navsection {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 20px;
+    font-size: larger;
+    background-color: lightblue;
+}
+
+.collectionsection {
+    display: flex;
+
+}
+
+.sidebarsection {
+    width: 250px; 
+    max-width: 50;
+    height:95vh;
+    background-color: #dcf4f4;
+    padding-top: 10px;
+    
+}
+
+
+.sidebarsection ul li {
+    margin-bottom: 50px;
+    margin-left: 20px;
+    font-size: larger;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+}
+
+.loginsection {  
+    width:1300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.registersection {
+    width:1300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.authForm {
+    width: 400%;
+    max-width: 500px; 
+    margin-top: -230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.authForm input{
+    width: 100%;
+    max-width: 60%;
+    border-style: ridge;
+}
+
+.authForm label {
+    display: block;
+    text-align: left; 
+    margin-bottom: 5px; 
+    font-weight: 500;
+    width: 70%; 
+    padding-left: 50px;
+    
+}
+
+.submitsection {
+    margin-top: 10px;
+}
+
+.UserAuth{
+    cursor: pointer;
+}
+
+
+.firmsection {  
+    width:1300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.firmform {
+    width: 400%;
+    max-width: 500px; 
+    margin-top: -230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: -100px;
+}
+
+.firmform input{
+    width: 100%;
+    max-width: 60%;
+    border-style: ridge;
+}
+
+.firmform label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px; 
+    font-weight: 500;
+    width: 70%; 
+    padding-left: 50px;
+    
+}
+
+
+
+.submitsection button{
+    background-color: aquamarine;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.catsection {
+    width: 100px;
+    max-width: 80px;
+    margin-left:-201px;
+    
+    display:flex;
+
+}
+
+.catsection label{
+    width: 90px;
+    margin-left: -60px;
+}
+
+.twoboxes{
+    
+    width:100px;
+    max-width:70px;
+    display:flex;
+    margin-top: -10px;
+    
+   
+}
+
+.box{
+    width: 200px;
+    max-width: 100px;
+    margin-top: 20px;
+    margin-left: 50px;
+    
+}
+
+.box label{
+    width: 100px;
+    margin-left: -120px;
+    
+}
+
+
+.box1{
+   
+    width: 100px;
+    margin-left: -50px;
+    display: flex;
+}
+
+.box2{
+ 
+    width: 100px;
+    margin-left: -50px;
+    display: flex;
+}
+
+
+
