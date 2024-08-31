@@ -74,10 +74,10 @@ const showAllproducthandler=()=>{
       <NavBar showloginhandler={showloginhandler} showregisterhandler={showregisterhandler} showLogOut={showLogOut} LogOutHandler={LogOutHandler}/>
         <div className="collectionsection">
           <SideBar showfirmhandler={showfirmhandler} showproducthandler={showproducthandler} showAllproducthandler={showAllproducthandler}/>
-          {showLogin && <Login showfirmhandler={showfirmhandler}/>}
+          {showLogin && showLogOut && <Login showfirmhandler={showfirmhandler}/>}
           {showRegister && <Register showloginhandler={showloginhandler}/>}
-          {showfirm && <Addfirm showproducthandler={showproducthandler}/>}
-          {showproduct && <Addproduct />}
+          {showfirm &&showLogOut&& <Addfirm showproducthandler={showproducthandler}/>}
+          {showproduct &&showLogOut&& <Addproduct />}
           {showAllproduct && <Allproducts showAllproducthandler={showAllproducthandler}/>}
           
         </div>

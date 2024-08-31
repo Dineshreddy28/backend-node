@@ -10,7 +10,7 @@ const Allproducts = () => {
       const response = await fetch(`${API_URL}/product/${firmId}/products`);
       const newProductsData = await response.json();
       setProducts(newProductsData);
-      console.log(newProductsData);
+      
     } catch (error) {
       console.error("Error fetching products:", error);
       alert("Failed to fetch products");
@@ -40,7 +40,7 @@ const Allproducts = () => {
 
   return (
     <div>
-      {products && products.length === 0 ? (
+      {!products ? (
         <p>No Products Added</p>
       ) : (
         <table className="Product-Table">
